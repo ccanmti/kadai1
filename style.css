@@ -1,0 +1,106 @@
+/*ブラウザがそれぞれ持っているCSSをリセットするための記述*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #6c6b6b;
+}
+
+/*ヘッダー部*/
+header{
+  width:100%;
+  height: 50px;
+  background-color: #FF9A4B;
+}
+
+/*メイン部*/
+main{
+  width: 960px;
+  margin: 50px auto; /*上部のマージンを50px　横を自動*/
+  display: flex;
+}
+
+.big-box{
+  width: 300px;
+  margin-right: 30px;
+  padding: 10px;
+  background-color: #EEEEEE;
+  position: relative;
+}
+
+.big-box:last-child{
+  margin-right:0;
+}
+
+.flow01{
+  height: 150px;
+  background-image: url(img/flow01.png);
+  background-position: bottom;/*挿入画像の描画される位置(今回は下)*/
+  background-size: cover;
+
+}
+
+.flow02{
+  height: 150px;
+  background-image: url(img/flow02.png);
+  background-position: bottom;/*挿入画像の描画される位置(今回は下)*/
+  background-size: cover;
+
+}
+
+.flow03{
+  height: 150px;
+  background-image: url(img/flow03.png);
+  background-position: bottom;/*挿入画像の描画される位置(今回は下)*/
+  background-size: cover;
+
+}
+
+.step{
+  position: absolute;
+  top: 0; /*spanの位置指定*/
+  left: 0; /*spanの位置指定*/
+  background-color: #ff9a4b;
+  color: #fff; /*文字色*/
+}
+
+.title{
+  margin:15px 0 5px;
+}
+
+/*フッター部*/
+footer{
+  width: 100%;
+  height: 50px;
+  background-color: #AAAAAA;
+}
+
+@media screen and (max-width:768px){
+  
+  header{
+    width: 100%;
+  }
+  
+  main{
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+    display: block; /*メイン内部を768px以下ではブロック要素に変更*/
+  }
+  
+  .big-box:nth-child(1){
+    width:100%;
+    margin: 50px auto 0px;
+  }
+  
+  .big-box:nth-child(2){
+    width: 100%;
+    margin: 20px auto;
+  }
+
+  .big-box:nth-child(3){
+    width: 100%;
+    margin: 20px auto 50px auto;
+  }
+  
+}
